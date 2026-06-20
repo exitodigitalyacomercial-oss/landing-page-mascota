@@ -343,7 +343,14 @@
             .btn-cta { font-size: 1.1rem; padding: 18px 20px; }
             .cta-oferta-container { flex-direction: column; gap: 5px; }
             .huella-grande { transform: rotate(90deg); }
+}
+            /* Animación para la portada flotante */
+        @keyframes float-with-tilt {
+            0% { transform: translateY(0) rotate(-1deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0) rotate(-1deg); }
         }
+        
     </style>
 </head>
 <body>
