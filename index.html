@@ -603,5 +603,53 @@
         </div>
     </footer>
 
+<script>
+        const trailContainer = document.body;
+        const trailParticleCount = 10;
+        const trailColor = "rgba(255, 215, 0, 0.5)"; // Color dorado semitransparente
+
+        trailContainer.addEventListener("mousemove", function(e) {
+            for (let i = 0; i < trailParticleCount; i++) {
+                createParticle(e.clientX, e.clientY);
+            }
+        });
+
+        function createParticle(x, y) {
+            const particle = document.createElement("div");
+            particle.className = "trail-particle";
+            trailContainer.appendChild(particle);
+
+            const size = Math.random() * 8 + 2;
+            const style = particle.style;
+            style.width = size + "px";
+            style.height = size + "px";
+            style.backgroundColor = trailColor;
+            style.borderRadius = "50%";
+            style.position = "fixed";
+            style.left = (x + Math.random() * 20 - 10) + "px";
+            style.top = (y + Math.random() * 20 - 10) + "px";
+            style.pointerEvents = "none";
+            style.zIndex = "9999";
+
+            const animationTime = Math.random() * 1 + 0.5;
+            style.animation = `fadeAndScale ${animationTime}s ease-out`;
+
+            setTimeout(function() {
+                trailContainer.removeChild(particle);
+            }, animationTime * 1000);
+        }
+    </script>
+    <style>
+        @keyframes fadeAndScale {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.1);
+            }
+        }
+    </style>
 </body>
 </html>
