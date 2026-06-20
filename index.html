@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seu Filhote Faz Isso? - Método Exclusivo</title>
+
+    <!-- ================================================================= -->
+    <!-- COLOCA AQUÍ TUS CÓDIGOS DE PÍXEL (META / GOOGLE / HOTMART)       -->
+    <!-- Pega aquí abajo el código <script> que te dá la plataforma      -->
+    
+    
+    <!-- ================================================================= -->
+
     <style>
         :root {
             --azul-escuro: #0b192c;
@@ -23,10 +31,10 @@
             position: relative;
             min-height: 100vh;
             overflow-x: hidden;
-            
-            /* AQUÍ ESTÁ EL FONDO AZUL MARINO CON EL PATRÓN DE HUELLITAS INTEGRADO DE FORMA SEGURA */
             background-color: var(--azul-escuro);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M12 22c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-12 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm3.5 9.5c0-1.4-1.1-2.5-2.5-2.5s-2.5 1.1-2.5 2.5c0 1.9 2.5 4.5 2.5 4.5s2.5-2.6 2.5-4.5z' fill='%23ffffff' fill-opacity='0.02'/%3E%3C/svg%3E");
+            
+            /* HUELLAS DEL FONDO MÁS VISIBLES (OPACIDAD SUBIDA A 0.06) */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M12 22c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-12 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm3.5 9.5c0-1.4-1.1-2.5-2.5-2.5s-2.5 1.1-2.5 2.5c0 1.9 2.5 4.5 2.5 4.5s2.5-2.6 2.5-4.5z' fill='%23ffffff' fill-opacity='0.06'/%3E%3C/svg%3E");
             background-attachment: fixed;
         }
 
@@ -133,6 +141,25 @@
         .btn-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 15px 30px rgba(244, 211, 94, 0.5);
+        }
+
+        /* --- CONTENEDOR BOTÓN + HUELLA GRANDE --- */
+        .cta-oferta-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .huella-grande {
+            font-size: 3.5rem;
+            animation: pulse 2s infinite;
+            user-select: none;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
         /* --- SEÇÕES COMUNS --- */
@@ -292,7 +319,7 @@
             border: 3px solid var(--amarelo-vibrante);
             border-radius: 16px;
             padding: 50px 30px;
-            max-width: 600px;
+            max-width: 630px;
             margin: 40px auto;
         }
         .preco-antigo { font-size: 1.2rem; text-decoration: line-through; color: #94a3b8; margin-bottom: 5px; }
@@ -314,14 +341,14 @@
             .hero-text { text-align: center; }
             .hero-bullets li { justify-content: center; }
             .btn-cta { font-size: 1.1rem; padding: 18px 20px; }
+            .cta-oferta-container { flex-direction: column; gap: 5px; }
+            .huella-grande { transform: rotate(90deg); }
         }
     </style>
 </head>
 <body>
 
-    <!-- CONTAINER PRINCIPAL -->
     <div class="container">
-        
         <!-- SEÇÃO HERO -->
         <header class="hero">
             <span class="badge">🚨 SEU FILHOTE FAZ ISSO?</span>
@@ -347,7 +374,6 @@
                 </div>
             </div>
         </header>
-
     </div>
 
     <!-- SEÇÃO PROBLEMAS -->
@@ -428,17 +454,14 @@
     <section class="section-white" style="background-color: #f1f5f9;">
         <div class="container" style="padding: 20px;">
             <h2>QUEM JÁ TESTOU, APROVOU!</h2>
-            
             <div class="testimonial-box">
                 <p>"O Marley destruía os chinelos de todo mundo e urinava na sala toda noite. Logo na primeira semana aplicando os módulos de rotina e xixi, ele entendeu o lugar certo. Minha casa finalmente está limpa!"</p>
                 <div class="testimonial-author">— Mariana Souza, São Paulo/SP</div>
             </div>
-
             <div class="testimonial-box">
                 <p>"Achei que meu filhote de Pitbull não fosse aprender os comandos básicos porque era muito agitado. Com o passo a passo sem punições, ele aprendeu a sentar e a parar de morder nossas mãos em dias."</p>
                 <div class="testimonial-author">— Ricardo Alencar, Curitiba/PR</div>
             </div>
-
             <div class="testimonial-box">
                 <p>"Excelente conteúdo! O livro vai direto ao ponto sem enrolação. Os latidos excessivos quando eu saía de casa diminuíram 90%. Valeu cada centavo investido."</p>
                 <div class="testimonial-author">— Juliana Mendes, Belo Horizonte/MG</div>
@@ -473,7 +496,13 @@
                 </ul>
                 <div class="preco-antigo">De R$ 97,00</div>
                 <div class="preco-novo">Por R$ 47,00</div>
-                <a href="https://pay.hotmart.com" class="btn-cta">QUERO MEU EBOOK AGORA</a>
+                
+                <!-- BOTÓN DE PAGO CON HUELLA GRANDE AL LADO -->
+                <div class="cta-oferta-container">
+                    <a href="https://pay.hotmart.com" class="btn-cta">QUERO MEU EBOOK ACORA</a>
+                    <span class="huella-grande">🐾</span>
+                </div>
+                
                 <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 15px;">🔒 Compra 100% segura e processada pela Hotmart</p>
             </div>
         </div>
@@ -494,7 +523,7 @@
                 </div>
                 <div class="faq-item">
                     <h3>Preciso ter experiência prévia?</h3>
-                    <p>Nenhuma! O guia foi escrito com uma linguagem simples, direta e em formato de passo a passo para que qualquer dono consiga aplicar os exercícios com facilidade.</p>
+                    <p>Nenhuma! O guia foi escrito com uma linguagem simples, direta e em formato de passo a passo para que qualquer dono consiga aplicar os exercícios com facilidad.</p>
                 </div>
                 <div class="faq-item">
                     <h3>Quando recebo o acesso?</h3>
