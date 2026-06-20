@@ -350,7 +350,15 @@
             50% { transform: translateY(-10px) rotate(1deg); }
             100% { transform: translateY(0) rotate(-1deg); }
         }
-        
+   /* Efecto al pasar el mouse por el botón de compra */
+        .btn-cta {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .btn-cta:hover {
+            transform: scale(1.05); /* Lo agranda un 5% */
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4); /* Le da un brillo dorado */
+            filter: brightness(1.1); /* Lo ilumina un poquito */
+        }     
     </style>
 </head>
 <body>
