@@ -372,6 +372,30 @@
             transform: translateX(5px); /* Hace que la flecha se mueva a la derecha */
             transition: transform 0.3s ease;
         }
+        /* Efecto al pasar el mouse por el botón de compra */
+        .btn-cta {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .btn-cta:hover {
+            transform: scale(1.05); /* Lo agranda un 5% */
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4); /* Le da un brillo dorado */
+            filter: brightness(1.1); /* Lo ilumina un poquito */
+        }
+
+        /* Efecto al pasar el mouse por los módulos */
+        .modulo {
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .modulo:hover {
+            transform: translateY(-4px); /* Eleva el bloque hacia arriba */
+            background-color: #2e3d5a; /* Aclara el fondo un poco */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Le da una sombra */
+        }
+        .modulo:hover span {
+            display: inline-block;
+            transform: translateX(6px); /* Mueve la flecha a la derecha */
+            transition: transform 0.3s ease;
+        }
     </style>
 </head>
 <body>
